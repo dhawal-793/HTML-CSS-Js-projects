@@ -1,26 +1,16 @@
-
+// Variables
 const rollBtn = document.querySelector(".btn")
 const Heading = document.querySelector(".heading")
 const dice1 = document.getElementById("dice1")
 const dice2 = document.getElementById("dice2")
 
 
-
+// Checking the winner
 const checkWin = (r1, r2) => {
-    if (r1 > r2) {
-        console.log("Player 1 Won")
-        Heading.innerText = "Player1 Won"
-    }
-    else if (r1 < r2) {
-        console.log("Player 2 Won")
-        Heading.innerText = "Player2 Won"
-    }
-    else {
-        console.log("No One Won")
-        Heading.innerText = "Draw"
-    }
+    Heading.innerText = r1 > r2 ? "Player 1 Won" : r1 < r2 ? "Player 2 Won" : "Draw";
 }
 
+// Assigning random dice image to both dices
 const randomNumber = () => {
     const random_number1 = Math.floor(Math.random() * 6) + 1;
     const random_number2 = Math.floor(Math.random() * 6) + 1;
@@ -28,15 +18,13 @@ const randomNumber = () => {
     const dice2_image = `assets/dice${random_number2}.png`;
     dice1.setAttribute("src", dice1_image);
     dice2.setAttribute("src", dice2_image);
-    console.log(random_number1, random_number2);
     checkWin(random_number1, random_number2);
 }
 
+// Roll
 const Roll = () => {
-    console.log(dice1, dice2, player1, player2);
     randomNumber();
 }
 
-
-
+// Adding click event listener to Roll button
 rollBtn.addEventListener("click", Roll)
