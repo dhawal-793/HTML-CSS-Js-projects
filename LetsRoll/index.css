@@ -23,10 +23,15 @@ body {
   margin: 0px auto;
 }
 
-h1 {
+.heading {
+  top: 6vh;
   margin: 0px auto;
+  font-family: "Lobster", cursive;
   text-align: center;
-  width: 52vw;
+  color: aqua;
+  text-shadow: 3px 5px #183977;
+  font-size: 2rem;
+  width: 80vw;
 }
 
 .dice-container {
@@ -44,7 +49,11 @@ h1 {
   margin: 0px auto;
 }
 p {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Lobster", cursive;
+  color: rgb(64, 0, 255);
+  text-shadow: 2px 1px #7af2ff;
   text-align: center;
 }
 
@@ -53,17 +62,19 @@ p {
   max-width: 20vw;
 }
 
-
-.heading {
-  top: 6vh;
-}
-
 .btn {
   bottom: 12vh;
-  padding: 5px 15px;
+  font-family: "indie flower", cursive;
+  font-size: 1.5rem;
+  padding: 3px 15px;
   align-items: center;
-  min-width: 5vw;
-  min-height: 2.1vw;
+
+  width: 20vw;
+  height: 38px;
+  max-width: 150px;
+  min-width: 120px;
+  min-height: 36px;
+  max-height: 40px;
   color: #fff;
   background-image: linear-gradient(45deg, rgb(0, 47, 255), rgb(5, 247, 255));
   cursor: pointer;
@@ -72,11 +83,27 @@ p {
   border: none;
 }
 .btn:hover {
-
-  width:5.8vw;
-  height:2.4vw;
+  width: 22vw;
+  height: 40px;
+  max-width: 160px;
+  min-width: 130px;
+  min-height: 38px;
+  max-height: 42px;
+  bottom: 11.5vh;
 }
 
 .footer {
   bottom: 2vh;
+}
+
+@media (min-width: 368px) {
+  p {
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+}
+@media (min-width: 468px) {
+  p {
+    font-size: 1.8rem;
+  }
 }
