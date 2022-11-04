@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lets Roll</title>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet" />    <!-- Link to the Google Fonts -->                         
-  
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+    <!-- Link to the Google Fonts -->
+
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -15,11 +19,13 @@
       <div class="dice-container align-center">
         <div class="player-1">
           <p class="player-name" id="p1">Player 1</p>
-          <img src="assets/dice6.png" alt="6" class="dice" id="dice1" />
+          <img src="assets/dice_6.png" alt="6" class="dice" id="dice1" />
+          <p class="scores">Score: <span id="p1-score">0</span></p>
         </div>
         <div class="player-2">
           <p class="player-name" id="p2">Player 2</p>
-          <img src="assets/dice6.png" alt="6" class="dice" id="dice2" />
+          <img src="assets/dice_6.png" alt="6" class="dice" id="dice2" />
+          <p class="scores">Score: <span id="p2-score">0</span></p>
         </div>
       </div>
       <button class="btn align-center" id="roll">Roll</button>
