@@ -8,6 +8,9 @@ const player2_score = document.getElementById("p2-score")
 const attempts = document.getElementById("attempts")
 
 
+let random_number1 = 6;
+let random_number2 = 6;
+
 
 
 // Checking the winner and updating the Scores
@@ -24,7 +27,7 @@ const checkWin = (r1, r2) => {
 }
 
 // Changing the dice with some animations
-const changeDice = (dice1_image,dice2_image) => {
+const changeDice = (dice1_image, dice2_image) => {
     dice1.classList.remove('grow')
     dice2.classList.remove('grow')
     dice1.classList.add('shrink')
@@ -40,18 +43,19 @@ const changeDice = (dice1_image,dice2_image) => {
         checkWin(random_number1, random_number2);
         setTimeout(() => {
             rollBtn.disabled = false;
-            rollBtn.classList.remove("disabled")
-        }, 400)
+            rollBtn.classList.remove('disabled')
+        }, 400);
     }, 700);
+
 }
 
 // Assigning random dice image to both dices
 const randomNumber = () => {
-    const random_number1 = Math.floor(Math.random() * 6) + 1;
-    const random_number2 = Math.floor(Math.random() * 6) + 1;
+    random_number1 = Math.floor(Math.random() * 6) + 1;
+    random_number2 = Math.floor(Math.random() * 6) + 1;
     const dice1_image = `assets/dice_${random_number1}.png`;
     const dice2_image = `assets/dice_${random_number2}.png`;
-    changeDice(dice1_image,dice2_image);
+    changeDice(dice1_image, dice2_image);
 }
 
 // Roll
