@@ -69,17 +69,17 @@ body {
   margin: 0px auto;
 }
 
-  /* Heading */
-  .heading {
-    top: 6vh;
-    margin: 0px auto;
-    font-family: "Lobster", cursive;
-    text-align: center;
-    color: var(--heading);
-    text-shadow: 2px 3px #183977;
-    font-size: 1.5rem;
-    width: 80vw;
-  }
+/* Heading */
+.heading {
+  top: 6vh;
+  margin: 0px auto;
+  font-family: "Lobster", cursive;
+  text-align: center;
+  color: var(--heading);
+  text-shadow: 2px 3px #183977;
+  font-size: 1.5rem;
+  width: 80vw;
+}
 
 /* Dice Container */
 .dice-container {
@@ -99,53 +99,54 @@ body {
 }
 
 /* Player Names */
-p {
+.player-name {
   font-size: 1rem;
   font-weight: 700;
-  font-family: "Lobster", cursive;
-  color: rgb(64, 0, 255);
-  text-shadow: 2px 1px #7af2ff;
+  font-family: cursive;
   text-align: center;
+  background-image: var(--player-name);
+  -webkit-background-clip: text;
+  color: transparent;
 }
+
 /* Dice Image */
 .dice {
   width: 15rem;
   max-width: 20vw;
 }
 
-  /* Scores */
-  .scores {
-    font-size: 0.7rem;
-    color: var(--secondary-color);
-  }
-  /* player score */
-  .scores span {
-    color: var(--primary-color);
-  }
-  /* Attempts */
-  .attempts {
-    bottom: 21vh;
-  }
+/* Scores */
+.scores {
+  font-size: 0.7rem;
+  color: var(--secondary-color);
+}
+/* player score */
+.scores span {
+  color: var(--primary-color);
+}
+/* Attempts */
+.attempts {
+  bottom: 21vh;
+}
 
 /* Button */
 .btn {
   bottom: 12vh;
   font-family: "indie flower", cursive;
-  font-size: 1.5rem;
-  padding: 3px 15px;
+  font-size: 1rem;
+  padding: 1px 8px;
   align-items: center;
-
-  width: 20vw;
-  height: 38px;
-  max-width: 150px;
-  min-width: 120px;
-  min-height: 36px;
-  max-height: 40px;
+  width: 8vw;
+  height: 23px;
+  max-width: 90px;
+  min-width: 70px;
+  min-height: 14px;
+  max-height: 28px;
   color: #fff;
-  background-image: linear-gradient(45deg, rgb(0, 47, 255), rgb(5, 247, 255));
+  background-image: var(--btn-color-active);
   cursor: pointer;
   border-radius: 9999px;
-  box-shadow: 2px 2px 10px 1px rgb(83, 45, 207);
+  box-shadow: 5px 5px 10px 1px rgb(83, 45, 207);
   border: none;
 }
 .btn:hover {
