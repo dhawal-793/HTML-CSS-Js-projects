@@ -17,23 +17,35 @@
     rgb(255, 5, 26)
   );
   --heading: #00ffff;
-  --primary-color:#00f7ff;
-  --secondary-color:#93fbff;
+  --primary-color: #00f7ff;
+  --secondary-color: #93fbff;
 }
-
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(191, 0, 255),
-    rgb(5, 213, 255)
-  );
   overflow: hidden;
   font-family: cursive;
+  /* background-color: #dfdfdf; */
+  background-image: var(--gradient);
+
+  /* Remove below comments to see animation */
+  /* background-size: 400%; */
+  /* background-position: left; */
+  /* animation: animate 30s ease-in-out 0s infinite alternate; */
 }
+
+/* Animation */
+@keyframes animate {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
 
 .align-center {
   position: absolute;
