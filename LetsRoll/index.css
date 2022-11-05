@@ -46,7 +46,15 @@ body {
   }
 }
 
-
+/* Utility Classes */
+.shrink {
+  transition: linear 0.3s;
+  transform: scale(0);
+}
+.grow {
+  transition: linear 0.3s;
+  transform: scale(1);
+}
 .align-center {
   position: absolute;
   left: 50%;
