@@ -23,6 +23,27 @@ const checkWin = (r1, r2) => {
     }
 }
 
+// Changing the dice with some animations
+const changeDice = (dice1_image,dice2_image) => {
+    dice1.classList.remove('grow')
+    dice2.classList.remove('grow')
+    dice1.classList.add('shrink')
+    dice2.classList.add('shrink')
+    Heading.innerText = "Checking..."
+    setTimeout(() => {
+        dice2.setAttribute("src", dice2_image);
+        dice1.setAttribute("src", dice1_image);
+        dice1.classList.remove('shrink')
+        dice2.classList.remove('shrink')
+        dice1.classList.add('grow')
+        dice2.classList.add('grow')
+        checkWin(random_number1, random_number2);
+        setTimeout(() => {
+            rollBtn.disabled = false;
+            rollBtn.classList.remove("disabled")
+        }, 400)
+    }, 700);
+}
 
 // Assigning random dice image to both dices
 const randomNumber = () => {
@@ -30,14 +51,13 @@ const randomNumber = () => {
     const random_number2 = Math.floor(Math.random() * 6) + 1;
     const dice1_image = `assets/dice_${random_number1}.png`;
     const dice2_image = `assets/dice_${random_number2}.png`;
-    dice2.setAttribute("src", dice2_image);
-    dice1.setAttribute("src", dice1_image);
-    checkWin(random_number1,random_number2)
+    changeDice(dice1_image,dice2_image);
 }
 
 // Roll
 const Roll = () => {
-
+    rollBtn.disabled = true;
+    rollBtn.classList.add("disabled")
     attempts.innerText = parseInt(attempts.innerText) + 1;
 
     randomNumber();
