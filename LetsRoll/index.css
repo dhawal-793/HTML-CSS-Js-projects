@@ -1,3 +1,27 @@
+/* Variables */
+:root {
+  --gradient: linear-gradient(
+    45deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc75f,
+    #f9f871
+  );
+  --player-name: linear-gradient(blue, red);
+  --btn-color-active: linear-gradient(45deg, rgb(5, 247, 255), rgb(0, 47, 255));
+  --btn-color-disabled: linear-gradient(
+    45deg,
+    rgb(0, 47, 255),
+    rgb(255, 5, 26)
+  );
+  --heading: #00ffff;
+  --primary-color:#00f7ff;
+  --secondary-color:#93fbff;
+}
+
+
 body {
   margin: 0;
   padding: 0;
