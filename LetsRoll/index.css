@@ -8,6 +8,7 @@ body {
     rgb(5, 213, 255)
   );
   overflow: hidden;
+  font-family: cursive;
 }
 
 .align-center {
@@ -16,6 +17,7 @@ body {
   transform: translateX(-50%);
 }
 
+/* Main Container */
 .container {
   width: 100vw;
   height: 100vh;
@@ -23,17 +25,19 @@ body {
   margin: 0px auto;
 }
 
+/* Heading */
 .heading {
   top: 6vh;
   margin: 0px auto;
   font-family: "Lobster", cursive;
   text-align: center;
   color: aqua;
-  text-shadow: 3px 5px #183977;
-  font-size: 2rem;
+  text-shadow: 2px 3px #183977;
+  font-size: 1.5rem;
   width: 80vw;
 }
 
+/* Dice Container */
 .dice-container {
   top: 50%;
   transform: translate(-50%, -50%);
@@ -41,13 +45,17 @@ body {
   width: 85vw;
   align-items: center;
   justify-content: space-around;
+  flex: 1 0 auto;
 }
 
+/* Player Container */
 .player1,
 .player2 {
   align-items: center;
   margin: 0px auto;
 }
+
+/* Player Names */
 p {
   font-size: 1rem;
   font-weight: 700;
@@ -56,12 +64,13 @@ p {
   text-shadow: 2px 1px #7af2ff;
   text-align: center;
 }
-
+/* Dice Image */
 .dice {
   width: 15rem;
   max-width: 20vw;
 }
 
+/* Button */
 .btn {
   bottom: 12vh;
   font-family: "indie flower", cursive;
@@ -92,18 +101,43 @@ p {
   bottom: 11.5vh;
 }
 
+/* Footer */
 .footer {
   bottom: 2vh;
 }
 
-@media (min-width: 368px) {
+/* Media Query */
+@media (min-width: 348px) {
   p {
     font-size: 1.4rem;
     font-weight: 800;
+  }
+
+  .heading {
+    font-size: 2rem;
+    text-shadow: 3px 5px #183977;
+  }
+  .btn {
+    font-size: 1.5rem;
+    padding: 3px 15px;
+    width: 20vw;
+    height: 38px;
+    max-width: 140px;
+    min-width: 120px;
+    min-height: 36px;
+    max-height: 40px;
   }
 }
 @media (min-width: 468px) {
   p {
     font-size: 1.8rem;
+  }
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 2.1rem;
+  }
+  .footer {
+    bottom: 1vh;
   }
 }
