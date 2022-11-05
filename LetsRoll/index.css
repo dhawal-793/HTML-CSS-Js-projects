@@ -69,17 +69,17 @@ body {
   margin: 0px auto;
 }
 
-/* Heading */
-.heading {
-  top: 6vh;
-  margin: 0px auto;
-  font-family: "Lobster", cursive;
-  text-align: center;
-  color: aqua;
-  text-shadow: 2px 3px #183977;
-  font-size: 1.5rem;
-  width: 80vw;
-}
+  /* Heading */
+  .heading {
+    top: 6vh;
+    margin: 0px auto;
+    font-family: "Lobster", cursive;
+    text-align: center;
+    color: var(--heading);
+    text-shadow: 2px 3px #183977;
+    font-size: 1.5rem;
+    width: 80vw;
+  }
 
 /* Dice Container */
 .dice-container {
@@ -89,7 +89,6 @@ body {
   width: 85vw;
   align-items: center;
   justify-content: space-around;
-  flex: 1 0 auto;
 }
 
 /* Player Container */
@@ -113,6 +112,20 @@ p {
   width: 15rem;
   max-width: 20vw;
 }
+
+  /* Scores */
+  .scores {
+    font-size: 0.7rem;
+    color: var(--secondary-color);
+  }
+  /* player score */
+  .scores span {
+    color: var(--primary-color);
+  }
+  /* Attempts */
+  .attempts {
+    bottom: 21vh;
+  }
 
 /* Button */
 .btn {
