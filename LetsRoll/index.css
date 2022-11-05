@@ -149,16 +149,24 @@ body {
   box-shadow: 5px 5px 10px 1px rgb(83, 45, 207);
   border: none;
 }
-.btn:hover {
-  width: 22vw;
-  height: 40px;
-  max-width: 160px;
-  min-width: 130px;
-  min-height: 38px;
-  max-height: 42px;
-  bottom: 11.5vh;
-}
-
+  /* Button hover and focus */
+  .btn:hover,
+  .btn:focus {
+    width: 22vw;
+    height: 41px;
+    max-width: 145px;
+    min-width: 130px;
+    min-height: 39px;
+    max-height: 43px;
+    background-size: 200%;
+    bottom: 11.5vh;
+    animation: animate 1.5s ease-out infinite alternate;
+  }
+  /* Button disabled */
+  .disabled {
+    cursor: not-allowed;
+    background-image: var(--btn-color-disabled);
+  }
 /* Footer */
 .footer {
   bottom: 2vh;
